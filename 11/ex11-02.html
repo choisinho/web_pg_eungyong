@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>캔버스 그리기 맛보기</title></head>
+	<meta charset="UTF-8">
+	<title>캔버스 그리기 맛보기</title>
+</head>
+
 <body>
-<h3>캔버스 그리기 맛보기</h3>
-<hr>
-<canvas id="myCanvas" style="background-color:aliceblue"
-	    width="250" height="150"></canvas>
-<script>
-	var canvas = document.getElementById("myCanvas");
-	var context = canvas.getContext("2d");
+	<h3>캔버스 그리기 맛보기</h3>
+	<hr>
+	<canvas id="myCanvas" style="background-color:aliceblue" width="250" height="270"></canvas>
+	<script>
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
 
-	context.beginPath(); 
-	context.strokeStyle = "blue"; 	
-	context.rect(30, 30, 50, 50); 
-	context.stroke(); 
+		context.beginPath();
+		context.strokeStyle = "blue";
+		context.rect(30, 30, 50, 50);
+		context.stroke();
 
-	context.beginPath(); 	
-	context.fillStyle = "violet";  
-	context.rect(60, 60, 50, 50); 	
-	context.fill(); 
+		context.beginPath();
+		context.fillStyle = "violet";
+		context.rect(60, 60, 50, 50);
+		context.fill();
 
-	context.font = "20px Gothic";
-	context.fillStyle = "green";  
-	context.fillText("Text in Canvas", 100, 50); 
-</script>			 
+		context.font = "20px Gothic";
+		context.fillStyle = "green";
+		context.fillText("Text in Canvas", 100, 50);
+
+		<!--수정시작-->
+
+		context.beginPath();
+		context.strokeStyle = "red";
+		context.rect(30, 140, 60, 60)
+		context.stroke();
+
+		context.beginPath();
+		context.fillStyle = "black";
+		context.rect(120, 140, 60, 60)
+		context.fill();
+
+		context.font = "20px Gothic";
+		context.fillStyle = "green";
+		context.fillText("1726052 최신호", 30, 240)
+	</script>
 </body>
+
 </html>
