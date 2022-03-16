@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>선으로 삼각형 그리기</title>
+</head>
+
+<body>
+	<h3>선으로 삼각형 그리기</h3>
+	<hr>
+	<canvas id="myCanvas" style="background-color:aliceblue" width="200" height="400"></canvas>
+	<script>
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+
+		<!--moveTo는 이동하며 흔적을 남기지 않음, lineTo는 이동하며 흔적을 남김-->
+
+		context.beginPath();
+		context.moveTo(120, 20); 
+		context.lineTo(20, 50);
+		context.lineTo(150, 120);
+		context.lineTo(120, 20);
+		context.strokeStyle = "magenta"
+		context.stroke(); 
+
+		<!--적십자 만들기-->
+		
+		context.beginPath();
+		context.moveTo(70, 170);
+		context.lineTo(120, 170);
+		context.lineTo(120, 220);
+		context.lineTo(170, 220);
+		context.lineTo(170, 270);
+		context.lineTo(120, 270);
+		context.lineTo(120, 320);
+		context.lineTo(70, 320);
+		context.lineTo(70, 270);
+		context.lineTo(20, 270);
+		context.lineTo(20, 220);
+		context.lineTo(70, 220);
+		context.lineTo(70, 170);
+		context.strokeStyle = "red";
+		context.stroke(); 
+	</script>
+</body>
+
+</html>
