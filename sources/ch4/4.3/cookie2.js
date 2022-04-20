@@ -18,12 +18,13 @@ http.createServer(async (req, res) => {
   if (req.url.startsWith('/login')) {
     const { query } = url.parse(req.url);
     const { name } = qs.parse(query);
-    const expires = new Date();
+    // const expires = new Date();
     // 쿠키 유효 시간을 현재시간 + 5분으로 설정
-    expires.setMinutes(expires.getMinutes() + 5);
-    res.writeHead(302, {
+    // expires.setMinutes(expires.getMinutes() + 5);
+    res.writeHead(302, {    
       Location: '/',
-      'Set-Cookie': `name=${encodeURIComponent(name)}; Expires=${expires.toGMTString()}; HttpOnly; Path=/`,
+      // 'Set-Cookie': `name=${encodeURIComponent(name)}; Expires=${expires.toGMTString()}; HttpOnly; Path=/`,
+      'Set-Cookie': `name=${encodeURIComponent(name)}; Max-age=${3000}; HttpOnly; Path=/`, //max-age 사용
     });
     res.end();
   // name이라는 쿠키가 있는 경우
